@@ -31,7 +31,7 @@ $Matches = [
    ];
    // var_dump($Matches);
   // echo count($Matches);
-   $lengtharray = count($Matches);
+   // $lengtharray = count($Matches);
 
  ?>
  <!DOCTYPE html>
@@ -41,13 +41,27 @@ $Matches = [
      <title></title>
    </head>
    <body>
+     <?php for ($i=0; $i < count($Matches); $i++){
 
-      <?php
+       $Teamhome = $Matches[$i]['Teamhome'];
+       $Teamaway = $Matches[$i]['Teamaway'];
+       $Pointshome = $Matches[$i]['Pointshome'];
+       $Pointsaway = $Matches[$i]['Pointsaway'];
 
-      for ($i=0; $i < $lengtharray; $i++) {
-      }
 
-       ?>
+         ?>
+         <ul >
+           <li><?php echo $Teamhome ?></li>
+            <li><?php echo $Teamaway ?></li>
+             <li><?php echo $Pointsaway ?></li>
+             <li><?php echo $Pointshome ?></li>
+
+         </ul>
+
+
+
+
+       <?php } ?>
 
 
    </body>
