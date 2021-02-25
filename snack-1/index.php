@@ -5,7 +5,7 @@ $age = $_GET['age'];
 
 
 
-  if (strlen($name) > 3 && strpos($mail,'.') && strpos($mail,'@') && number_format($age)) {
+  if (strlen($name) > 3 && strpos($mail,'.') && strpos($mail,'@') && is_numeric($age)) {
     echo
     'accesso garantito';
   }
